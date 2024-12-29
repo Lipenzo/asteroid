@@ -34,3 +34,6 @@ class Player(CircleShape):
         movement_vector = pygame.Vector2(0, 1).rotate(self.rotation)
         movement_vector *= PLAYER_SPEED * dt
         self.position += movement_vector
+
+    def draw(self, screen):
+        pygame.draw.polygon(screen, "white", self.triangle(), 2)
